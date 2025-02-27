@@ -1,7 +1,7 @@
+import os
 import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
-import os
 
 # Load environment variables
 load_dotenv()
@@ -11,7 +11,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Check if the API key is loaded
 if not GEMINI_API_KEY:
-    st.error("API Key not found. Make sure you have a .env file with GEMINI_API_KEY set.")
+    st.error("API Key not found. Make sure you have a env file with GEMINI_API_KEY set.")
 
 # Configure the Gemini API
 genai.configure(api_key=GEMINI_API_KEY)
@@ -24,7 +24,7 @@ st.write("Enter a code snippet below, and the AI will explain it in simple terms
 code_input = st.text_area("Paste your code here:", height=300)
 
 # Generate Explanation
-if st.button("Explain Code") and code_input:
+if st.button("🤖 Explain Code") and code_input:
     try:
         # Use the latest Gemini model
         model = genai.GenerativeModel("gemini-1.5-pro-latest")
