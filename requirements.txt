@@ -1,0 +1,4 @@
+GOOGLE_API_KEY
+streamlit
+google-generativeai
+python-dotenv
